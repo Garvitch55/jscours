@@ -81,12 +81,127 @@ console.log(d);
 
 let x=null;
 
-//les objets 
+//les objets
 const tasse={
     color: "rouge",
     material: "céramique",
     price: 1,
     content_volume: 25,
+}
+
+
+const eleve={
+    name: "jean-Michel",
+    age:18,
+    class: "Terminal",
+    notes: [13, 18, 19, 2, 16, 15.5],
+}
+
+console.log(eleve.name)
+// calcul de la moyenne de jean michel, en codage naif
+
+let moyenne= ( eleve.notes[0] + eleve.notes[1] + eleve.notes[2] + eleve.notes[3] + eleve.notes[4] + eleve.notes[5] ) / 6
+console.log(moyenne)
+
+// Les opérateurs
+
+//l'affectation
+// on donne à la variable aa la valeur de 7
+let aa=7;
+
+//l'addition
+// la valeur 7 est écrasé par l addition 12 + 4 donc la variable "aa" est égale 16
+aa = 12 + 4;
+
+console.log(aa);
+
+// l'affectation après l 'addition
+//avec cette écriture on écrase pas la valeur mais on ajoute 4
+//à l"ancienne valeur
+aa += 4;
+console.log(aa) // donne 20
+
+
+//la soustraction
+let bb = 20 - 4;
+
+console.log(bb);// donne 16
+
+// l'affectation après la soustraction
+bb -= 4;
+console.log(bb) // donne 12
+
+
+//la multiplication
+let cc = 5 * 8;
+
+console.log(cc);// donne 40
+
+// l'affectation après la multiplication
+cc *= 2;
+console.log(cc) // donne 80
+
+
+//la division
+let dd = 20 / 4;
+
+console.log(dd);// donne 5
+
+// l'affectation après la multiplication
+dd /= 2;
+console.log(dd) // donne 2.5
+
+//les modulo
+
+let ee = 13 % 5
+
+console.log(ee) // donne 3
+
+
+// les exponentiels
+
+let ff = 3**2
+
+console.log(ff)// donne 9
+
+
+// les conditions 
+
+let gg = 4;
+let hh = 4;
+let ii = 9;
+
+if (gg == hh) {
+//si la condition est bien remplie alors il renvoi true
+// avec ==
+} else {
+// si la condition n'est pas remplie alors il renvoi false
+
+}
+
+//vérification égalité non strict
+if (6=="6") {
+   console.log("ça marche") 
+}
+
+//égalité strict varie en plus le type de données
+//ici l'égalité est fausse car 6 et un number et "6" est une
+//chaîne de caractère
+if (6==="6") {
+   
+} else{
+
+   console.log("ça marche pas") 
+}
+
+
+
+if (eleve.age>=18){
+    // ici la concaténation (coller plusieurs chaine de caractère entre elles)
+    //avec le nom de l'élève et un texte descriptif
+    console.log(eleve.name + " est bien majeur.")
+}else{
+    console.log(`${eleve.name} n'est pas majeur`)
 }
 
 
