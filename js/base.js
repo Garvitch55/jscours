@@ -205,3 +205,172 @@ if (eleve.age>=18){
 }
 
 
+const feuille = {
+    format : "A4",
+    prix: 5.0,
+    densite: 80,
+    couleur: "#f0ddae"
+
+}
+
+
+const recette= ["patate", "tomate", "ail", "huile d'olive"];
+
+const vitessedelalumiere= 299_792_458; //constante dans le vide
+// vitessedelalumiere=60; CA C'EST IMPOSSIBLE CAR CONSTANTE DEJA APPELE
+
+const table = [1, 2,3]
+table.push(4)
+console.log(table)
+// const = [];// tableau vide que l'on remplira plus tard
+const ingredients = [];
+
+//Ici on va fabriquer un plan qui permettra ça en js le prototypage
+
+class Ingredient{
+    constructor(nom, unite, quantite) {
+        this.nom = nom;
+        this.unite = unite;
+        this.quantite = quantite;
+    }
+}
+
+class Recette {
+    constructor(nom_recette, nbr_personne, etapes, liste_ingredients) {
+        this.nom_recette = nom_recette;
+        this.nbr_personne = nbr_personne;
+        this.etapes = etapes;
+        this.liste_ingredients = liste_ingredients;
+    }
+}
+// const sucreDeCanne = {
+//     nom: "Sucre de Canne",
+//     unite:'g',
+//     quantite : 75,
+// }
+
+const sucreDeCanne = new Ingredient ("sucre de canne", "g", 75);
+
+const lait = new Ingredient ("lait", "cl", 25);
+
+const oeuf = new Ingredient ("oeuf", "oeuf(s)", 3);
+
+const pain = new Ingredient ("Pains", "tranche(s) de pain", 6);
+
+
+console.log(sucreDeCanne)
+
+// Je vais donc mettre mes ingredient dans le tableau ingredients.
+ingredients.push(sucreDeCanne, lait, oeuf, pain)// permet de prendre un element et de le mettre au dernier emplacement d'un tableau
+console.log(ingredients)
+
+const etapes = ["Fouetter les oeufs avec le sucre et le lait.", "Y tremper les tranches de pain.", "Deux solutions pour la cuisson : les cuire à la poêle dans du beurre en les faisant dorer de chaque côté, ou, les cuire au four : beurrer légèrement un plat à gratin, y répartir les tranches, verser le reste du mélange (ajouter du sucre si envie), laisser cuire à 180°C (thermostat 6) jusqu'à que les tranches soient dorées."];
+
+const pain_perdu = new Recette ("Pain perdu", 4, etapes, ingredients);
+
+console.log(pain_perdu)
+
+
+//LES BOUCLES
+console.log("coucou!")
+console.log("coucou!")
+console.log("coucou!")
+console.log("coucou!")
+console.log("coucou!")
+console.log("coucou!")
+
+
+//imginons que l'on ai besoin d'écrire dans un console.log
+// 0 patate(s) à 2000 patate(s)
+// Allons nous écrire à la main 2001 console.log ?
+// non nous allons utiliser une boucle 
+//  et pour cette exemple nous allons utiliser la boucle for.
+
+for (let i=0; i<=20; i++) {
+    console.log(i + " patate(s)");
+
+}
+
+// boucle while
+                let n = 0;
+                while (n < 6) {
+                    console.log(n + "* 5 est égale à" + n * 5);
+                    n++ // veut dire n+1
+                }
+
+// Exercice
+// Utiliser une boucle while pour générer 10 nombres aléatoires
+// compris entre 0 et 100, puis les afficher dans la console
+
+                let w = 0;
+
+                while (w < 10) {
+                    console.log(Math.floor(Math.random() * 101)); // math.floor pour arrondir le nombre
+                    w++ // veut dire n+1
+                }
+
+
+// Do while 
+
+                // let password;
+
+                // // password=prompt("Entrez le mot de passe");
+                // // console.log(password)
+
+
+                // do {
+                // password=prompt("Entrez le mot de passe");
+                // } while (password !== "abc123");// !== veut dire tant que le mot de passe est mauvais
+
+                // console.log("Tu as trouver le mot de passe!")
+
+/// On simule un lancer de dé qui continue jusqu'à ce le joueur obtienne 6.
+// On ne peut pas savoir d'avance combien de fois il faudra executé la boucle
+
+    let de;
+                do {
+
+                 de= Math.floor((Math.random())*6+1); // veut dire intervalle de 0 à 6
+                 console.log("Résultat du dé :" + de);
+                 } while (de !==6);
+
+                 console.log("Tu as reussi à faire un 6!")
+// boucle for 
+for (let i = 0; i < 5; i++) {
+    console.log("compteur :" + i);
+}
+
+//Boucle for -> traverser les tableaux
+
+let voitures = ["Dacia", "Lada", "Audi", "Daihatsu", "Toyota", "Chevrolet"]
+
+for(let i =0; i< voitures.length; i++){
+    console.log(voitures[i])
+}
+
+// Boucle FOR .. OF
+
+let fruits = ["Pomme", "Banane", "Kiwi", "Avocat", "Durian"];
+
+for (let fruit of fruits){
+    console.log('J\'aime :' + fruit)
+}
+
+//exerice
+
+// vous allez me créer un ul li dans la div container
+
+const gafams = ["Google", "Amazon", "Facebook", "Apple", "Microsoft"]
+// A partir d'une boucle for of, vous   allez m'afficher dans chaque
+// li le nom d'une de ces sociétés
+
+const container=document.getElementById("container");
+const ul = document.createElement("ul");
+container.appendChild(ul)
+
+for (const gafam of gafams){
+    const li = document.createElement("li");
+    li.textContent=gafam;
+    ul.appendChild(li);
+}
+
