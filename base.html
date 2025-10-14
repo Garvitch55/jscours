@@ -104,10 +104,52 @@
             </code>
         </pre>
 
+// FOR IN
+<h3>For ... in</h3>
 
+        <pre class="line-numbers">
+            <code class="language-javascript">
+              
+            const stylo ={
+                taille : 15,
+                marque: "Bic",
+                couleur: "#0000FF",
+                aEncoreSonCapuchon: true
+            }
 
+            const penContainer = document.getElementById("pen-container");
+            penContainer.appendChild(ulPen);
+            const ulPen = document.createElement("ul");
 
+            for (let cle in stylo){
+            let value =stylo [cle];
+            let li = document.createElement("li");
+            li.innerHTML = '<span class='bleu'>${cle}</span>: ${value}'
+            ul.appendChild(li);
+            console.log(value);
+            }
+  
+            </code>
+        </pre>
+<h2>Les mots clés BREAK ET CONTINUE</h2>
+<p>Break </p>
 
+<p>Continue</p>
+
+        <pre class="line-numbers">
+            <code class="language-javascript">
+              // CONTINUE
+                // Imaginons que l'on veut récupérer uniquement les nombres impaires générés par une boucle for
+                for (let i=0; i<10; i++) {
+                if (i%2 === 0) {
+                continue;
+                }
+                console.log(i)
+                }
+    
+  
+            </code>
+        </pre>
 
     </main>
 </body>

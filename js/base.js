@@ -374,3 +374,91 @@ for (const gafam of gafams){
     ul.appendChild(li);
 }
 
+// // FOR IN
+
+// const stylo ={
+//     taille : 15,
+//     marque: "Bic",
+//     couleur: "#0000FF",
+//     aEncoreSonCapuchon: true
+// }
+
+// const penContainer = document.getElementById("pen-container");
+// penContainer.appendChild(ulPen);
+// const ulPen = document.createElement("ul");
+
+// for (let cle in stylo){
+// let value =stylo [cle];
+// let li = document.createElement("li");
+//  li.innerHTML = '<span class='bleu'>${cle}</span>: ${value}'
+// ul.appendChild(li);
+// console.log(value);
+// }
+
+// // BREAK
+// for (let i=0; i<10; i++){
+//     if (i=== 5){
+//         break;
+//     }
+//     console.log(i)
+// }
+// console.log(i)(*-------------Séparation-------------------*)
+
+// // CONTINUE
+// // Imaginons que l'on veut récupérer uniquement les nombres impaires générés par une boucle for
+// for (let i=0; i<10; i++) {
+//     if (i%2 === 0) {
+//         continue;
+//     }
+//     console.log(i)
+// }
+
+
+//Exo continue
+
+const utilisateurs = [
+    {nom: "alice", actif: true},
+    {nom: "bob", actif: false},
+    {nom: "charlie", actif: true},
+    {nom: "david", actif: false},
+];
+
+//Dans un console log et avec une boucle et un continue, filtrer moi les utilisateurs pas actif
+// dans la console log on doit lire "Utilisateur actif : alice" etc...
+
+for (let i=0; i<utilisateurs.length; i++) {
+if (!utilisateurs[i].actif) {
+continue;
+ }
+console.log('Utilisateur actif :' + utilisateurs[i].nom)
+ }
+
+// exo 2 boucle continue
+
+const panier = [
+    {nom: "clavier", stock: 5},
+    {nom: "souris", stock: 0},
+    {nom: "écran", stock: 3},
+    {nom: "casque", stock: 0},
+    {nom: "Webcam", stock: 2},
+];
+
+// Dans un console.log(), afficher uniquement les produits qui ne sont pas en rupture de stock
+
+for (let i=0; i<panier.length; i++) {
+if (panier[i].stock===0) {
+continue;
+ }
+console.log(panier[i].nom + ' est(sont) en stock')
+ }
+
+
+ // Vous arrêter la recherche (boucle) dès qu'un produit est en stock
+
+ for (let i=0; i<panier.length; i++) {
+if (panier[i].stock===0) {
+continue;
+ }
+console.log(panier[i].nom + ' premier en stock')
+break;
+ }

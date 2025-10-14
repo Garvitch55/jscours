@@ -84,3 +84,7 @@ potato:hover{
     background-color: rgb(116,142,228);
     cursor: pointer;
 }
+
+.bleu{
+    color:blue;
+}
