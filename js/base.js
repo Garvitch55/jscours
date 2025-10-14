@@ -462,3 +462,118 @@ continue;
 console.log(panier[i].nom + ' premier en stock')
 break;
  }
+
+ //Avec une boucle while cherchez le premier multiple de 7 dans le tableau donné, la boucle s'arrête
+ //dès qu'il trouve ce multiple
+ // afficher le dans la console
+
+const nbrs = [2, 1, 9, 13, 14, 8, 74];
+let iter = 0;
+
+
+while (iter < nbrs.length) {
+    if (nbrs[iter] % 7 === 0) {
+        console.log("le premier multiple de 7 trouvé est " + nbrs[iter]);
+        break;
+    }
+    iter++
+}
+
+
+// Ecrire un programme qui parcourt un tableau de nombre avec boucle for
+// qui va aller chercher le premier nombre pair après un nombre impair
+//quand cela est fait ca coupe la boucle.
+
+const nbrs2 = [2, 18, 46, 19, 25, 14, 18, 9978];
+
+for (let i = 1; i < nbrs2.length; i++) {
+    const precedante = nbrs2[i - 1];
+    const actuel = nbrs2[i];
+
+    const precedentEstImpaire = precedante % 2 !== 0;
+    const actuelEstPair = actuel % 2 === 0;
+
+    if (precedentEstImpaire && actuelEstPair) {
+        console.log("Premier nombre pair après un impaire : " + actuel)
+        break;
+
+    }
+}
+
+
+// Exo a debuguer
+
+// const nombres = [3, 4, 18, 5, 27, 6];
+// let trouvé = false;
+
+// for (let i = 0; i <= nombres.length; i++) {
+//     if (nombres[i] % 9 == 0) {
+//         console.log("Trouvé :", nombres[i])
+//         trouvé = true
+//         break
+//     }
+// }
+
+// if (trouvé = false) {
+//     console.log("Aucun multiple de 9 trouvé")
+// }
+
+
+const nombres = [3, 1, 5, 5, 2, 6];
+let trouve = false;
+
+for (let i = 0; i <nombres.length; i++) {
+    if (nombres[i] % 9 === 0) {
+        console.log("Trouvé :", nombres[i])
+        trouve = true;
+        break;
+    }
+}
+
+if (!trouve) {
+        console.log("Aucun multiple de 9 trouvé");
+}
+
+
+
+// LES TABLEAUX
+
+const fruits2 = ["pomme", "banane", "orange"];
+
+
+// AJOUTER UN ELEMENT A LA FIN DU TABLEAU.
+fruits2.push("fraise");
+// AJOUTER UN ELEMENT AU DEBUT
+fruits2.unshift("melon");
+// SUPPRIMER  LE PREMIER ELEMENTS
+fruits2.shift();
+// SUPPRIMER LE DERNIER ELEMENTS
+fruits2.pop();
+
+
+// Autres fonctions utiles
+const fruits3 = ["framboise", "tomates", "coing", "poires"];
+// trouver l'index d'un élément
+let posFruit = fruits3.indexOf("tomates")
+console.log(posFruit)
+
+// verifier si un element est present
+console.log (fruits3.includes('orange'))
+
+//Convertir un tableau en chaine de caractere
+let saladeDeFruit = fruits.join(",")
+console.log(saladeDeFruit)
+
+// String
+// Connaître la taille d'une string
+let mot= "jean-Michel"
+console.log(mot.length);
+
+//Attend ?!! Length
+console.log(mot[3]);
+
+// On vous a menti depuis le début les string sont des tableaux
+// Pour ajouter par exemple une majuscule au premier élément
+let mot2=mot[0].charAt(0).toUpperCase() +mot.slice(1); //J + ean Michel
+console.log(mot2);
+

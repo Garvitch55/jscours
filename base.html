@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,20 @@
     <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
 </head>
+
 <body>
-    
+
     <main>
         <h1>Les bases du langage JavaScript</h1>
         <h2>Les variables</h2>
-        
-        <p>Une variables est un espaces mémoire  qui stocke une valeur (un nombre, du texte, etc)</p>
-        <p>En JS, on déclare uen variable avec avec les mots-clés let const et anciennement var (toujours utilisé dans du vieux code, par contre ne plus l'utiliser)</p>
+
+        <p>Une variables est un espaces mémoire qui stocke une valeur (un nombre, du texte, etc)</p>
+        <p>En JS, on déclare uen variable avec avec les mots-clés let const et anciennement var (toujours utilisé dans
+            du vieux code, par contre ne plus l'utiliser)</p>
 
         <h2>Les Boucles</h2>
-        <p>une <b>boucle</b> est une structure qui permet de <b>répéter</b>  un block de code tant qu'une condition est vraie.</p>
+        <p>une <b>boucle</b> est une structure qui permet de <b>répéter</b> un block de code tant qu'une condition est
+            vraie.</p>
         <p>C'est une façon automatique de répéter des instructions sans devoir les écrire plusieur fois</p>
         <h3>Les Types de Boucles</h3>
         <ul>
@@ -58,16 +62,16 @@
                 } while (condition);
             </code>
         </pre>
-   
+
         <p>Exemple concret</p>
-            <pre class="line-numbers">
+        <pre class="line-numbers">
             <code class="language-javascript">
                 let password;
                 do {
             // Imagin
                 } while (condition);
             </code>
-        </pre> 
+        </pre>
         <h3>La Boucle For</h3>
         <p>La plus classique et la plus utilisée quand on l'avance le nombre de répétitions</p>
         <pre class="line-numbers">
@@ -78,7 +82,7 @@
                 console.log("compteur :" + i);
                 }
             </code>
-        </pre> 
+        </pre>
 
         <P>Exemple concret</P>
         <p>Une boucle for permet de <b>traverser</b> un tableau à partir de ses index</p>
@@ -90,7 +94,7 @@
                 console.log(voitures[i])
                 }
             </code>
-        </pre> 
+        </pre>
         <h3>For ... of</h3>
         <div id="container">
 
@@ -104,8 +108,8 @@
             </code>
         </pre>
 
-// FOR IN
-<h3>For ... in</h3>
+        // FOR IN
+        <h3>For ... in</h3>
 
         <pre class="line-numbers">
             <code class="language-javascript">
@@ -131,10 +135,10 @@
   
             </code>
         </pre>
-<h2>Les mots clés BREAK ET CONTINUE</h2>
-<p>Break </p>
+        <h2>Les mots clés BREAK ET CONTINUE</h2>
+        <p>Break </p>
 
-<p>Continue</p>
+        <p>Continue</p>
 
         <pre class="line-numbers">
             <code class="language-javascript">
@@ -146,10 +150,98 @@
                 }
                 console.log(i)
                 }
-    
+            </code>
+        </pre>
+
+        <h2>LES TABLEAUX</h2>
+        <P>Un tableau en javascript est objet special qui peut contenir plusieurs valeurs dans une seule variable</P>
+
+        <pre class="line-numbers">
+            <code class="language-javascript">
+              let fruits = ["pomme", "banane", "orange"];
+
   
             </code>
         </pre>
+        <p>Comment accéder aux éléments</p>
+        <pre class="line-numbers">
+            <code class="language-javascript">
+              let fruits = ["pomme", "banane", "orange"];
+              console.log(fruits[0]); // "pomme"
+                console.log(fruits[1]); // "banane"
+                console.log(fruits[2]); // "orange"
+            </code>
+        </pre>
+
+        <p>Modofier un élément du tableau</p>
+        <pre class="line-numbers">
+            <code class="language-javascript">
+              const fruits = ["pomme", "banane", "orange"];
+              fruits[1]= "Kiwi";
+                     
+            </code>
+        </pre>
+        <p>Ajouter ou supprimer des éléments du tableau</p>
+        <pre class="line-numbers">
+            <code class="language-javascript">
+                        const fruits = ["pomme", "banane", "orange"];
+                        // AJOUTER UN ELEMENT A LA FIN DU TABLEAU.
+                        fruits2.push("fraise");
+                        // AJOUTER UN ELEMENT AU DEBUT
+                        fruits2.unshift("melon");
+                        // SUPPRIMER  LE PREMIER ELEMENTS
+                        fruits2.shift();
+                             
+            </code>
+        </pre>
+
+        <p>Autres fonction utile</p>
+            <pre class="line-numbers">
+                <code class="language-javascript">
+                        // Autres fonctions utiles
+                        const fruits3 = ["framboise", "tomates", "coing", "poires"];
+                        // trouver l'index d'un élément
+                        let posFruit = fruits3.indexOf("tomates")
+                        console.log(posFruit)
+
+                        // verifier si un element est present
+                        console.log (fruits3.includes('orange'))
+
+                        //Convertir un tableau en chaine de caractere
+                        let saladeDeFruit = fruits.join(",")
+                        console.log(saladeDeFruit)
+                </code>
+            </pre>
+
+        <h2>LES CHAINES DE CARACTERE</h2>
+        <p>Une chaîne de caractère ou string est une suite de caractères(lettre, chiffres, symbole ...)</p>
+            <pre class="line-numbers">
+                <code class="language-javascript">
+                        let txt= "Bonjour le monde"
+
+                        let nom = "Alice";
+                        let message 'salut !';
+                        let phrase ='${message} ${nom}' // Salut ! Alice
+                </code>
+            </pre>
+            
+            <pre class="line-numbers">
+                <code class="language-javascript">
+                    // String
+                    // Connaître la taille d'une string
+                    let mot= "jean-Michel"
+                    console.log(mot.length);
+
+                    //Attend ?!! Length
+                    console.log(mot[3]);
+
+                    // On vous a menti depuis le début les string sont des tableaux
+                    // Pour ajouter par exemple une majuscule au premier élément
+                    let mot2=mot[0].charAt(0).toUpperCase() +mot.slice(1); //J + ean Michel
+                    console.log(mot2);
+                </code>
+            </pre>
+
 
     </main>
 </body>
