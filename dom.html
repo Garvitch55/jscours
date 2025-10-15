@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="js/dom.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
     <title>Le DOM</title>
 </head>
 <body>
@@ -33,8 +35,43 @@
                 </ul>
             </div>
         </div>
+        <h2>Récupérer uen class en JS:</h2>
+        <ul class="list-pokemon">
+            <li class="pokemons">Alakazam</li>
+            <li class="pokemons">Leveinard</li>
+            <li class="pokemons">Dracofeu</li>
+            <li class="pokemons">Gardevoir</li>
+            <li class="pokemons">Mentali</li>
+        </ul>
+            <pre class="line-numbers">
+                <code class="language-javascript">
+                // RECUPERER LES CLASS
+
+                // METHODE DECONSEILLER
+                // const pokemons=document.getElementsByClassName("pokemons");
+                // console.log(pokemons[0]);
+
+                const pokemons=document.querySelectorAll('.pokemons')
+                // si on sait qu'il y a qu'un élément d'une classe on peut utiliser :
+                // Queryselector prendra uniquement le premier avec ce nom de classe.
+                console.log(pokemons[0]);
+                const listpokemon=document.querySelector('.list-pokemon')
+                console.log(listpokemon);
+
+                const colorPokemon = ["#ebae34", "#f5b0d7", "#f5bf82", "#d2faac", "#d7c5d9"];
+                for (let i=0; i< colorPokemon.length; i++) {
+                    pokemons[i].style.color=colorPokemon[i]
+                }
 
 
+                // ajouter une class 
+                // element.classList.add(nom de l'élément)
+                // enlever une class
+                // element.classList.remove(nom de la class)
+                //basculer de class
+                //element.classList.Toggle(nom de la classe)
+                </code>
+            </pre>
 
     </main>
    

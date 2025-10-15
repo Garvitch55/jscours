@@ -98,3 +98,29 @@ img.alt= "Une belle chips"
 mom.appendChild(img)
 
 
+// RECUPERER LES CLASS
+
+// METHODE DECONSEILLER
+// const pokemons=document.getElementsByClassName("pokemons");
+// console.log(pokemons[0]);
+
+const pokemons=document.querySelectorAll('.pokemons')
+// si on sait qu'il y a qu'un élément d'une classe on peut utiliser :
+// Queryselector prendra uniquement le premier avec ce nom de classe.
+console.log(pokemons[0]);
+const listpokemon=document.querySelector('.list-pokemon')
+console.log(listpokemon);
+
+const colorPokemon = ["#ebae34", "#f5b0d7", "#f5bf82", "#d2faac", "#d7c5d9"];
+for (let i=0; i< colorPokemon.length; i++) {
+    pokemons[i].style.color=colorPokemon[i]
+}
+
+
+// ajouter une class 
+// element.classList.add(nom de l'élément)
+// enlever une class
+// element.classList.remove(nom de la class)
+//basculer de class
+//element.classList.Toggle(nom de la classe)
+
