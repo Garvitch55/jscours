@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
     <title>Le DOM</title>
 </head>
-<body>
+<body style="height: 2000Vh;">
     <main>
     <h1>Le DOM ou le DOCUMENT OBJECT MODEL</h1>
 
@@ -72,6 +72,63 @@
                 //element.classList.Toggle(nom de la classe)
                 </code>
             </pre>
+
+
+<h2>SetTimeout() ET SetInterval()</h2>
+<h3>SetTimeout()</h3>
+<p>Ca execute une fonction une seule fois après un certain temps</p>
+
+ <pre class="line-numbers">
+                <code class="language-javascript">
+                        setTimeout(function(){
+                            console.log(" secondes se sont écoulés")
+                        }
+                        , 3000)
+
+                </code>
+            </pre>
+
+<h3>SetInterval()</h3>
+<p>Execute une fonction de maniere repetée d'intervalle régulier</p>
+ <pre class="line-numbers">
+                <code class="language-javascript">
+                    SetInterval(function(){
+                    console.log(" 1 seconde VIENT DE SE passer");
+                    }
+                    , 1000)
+                </code>
+            </pre>
+
+<h3>ClearTiemout et clearInterval</h3>
+<p>Pour supprimer vos timers il faudra les mettre dans une variable</p>
+                <code class="language-javascript">
+                                    
+                    let timer = setTimeout (function{
+                        console.log(" 3 secondes se sont écoulés")
+                    }
+                    , 3000
+                    )
+
+                    clearTimeout(timer) // c'est plus interessant dans un évènement
+
+
+                    const interval = setInterval (function(){
+
+                        console.log(" 1 seconde VIENT DE SE passer")
+                    }
+                    , 1000
+                    )
+
+                </code>
+
+
+
+
+
+
+
+
+clearInterval(interval)
 
     </main>
    
