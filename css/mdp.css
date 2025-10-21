@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+button{
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: coral;
+    border-radius: 10px;
+    color: bisque;
+}
+
+button:hover{
+    background-color: #a43f11;
+    cursor: pointer;
+}
+
+
