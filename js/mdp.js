@@ -1,64 +1,50 @@
-const btn = document.getElementById("btn")
-const mdp = document.getElementById("mdp")
+const showPsw = document.getElementById("password")
+const lengthPswInput = document.getElementById("length")
+const btn = document.getElementById("btn");
+
+// On récupère la longueur que doit faire le mot de passe.
 
 
-btn.addEventListener("click", function (){
+btn.addEventListener("click", generatePassword);
 
-generateMdp();
-    mdp.innerHTML=password1+password2+password3+password4+password5;
-    
-})
+function generatePassword() {
+    const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numbers = "0123456789";
+    const specials = "!@#$%^&*()_+=<>?,.;:";
+    let length = lengthPswInput.value;
 
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-function generateMdp() {
-    lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    numbers = '0123456789';
-    symbols = '!@#$%^&*()_+-=[]{}|;:,.<>?';
-    similarChars = '0Ol1I';
-
-    for (let i = 0; i < 24; i++) {
-
-        const randomIndex = Math.floor(Math.random() * lowercase.length);
-        password1 = lowercase[randomIndex];
-    }
-    for (let i = 0; i < 24; i++) {
-
-        const randomIndex2 = Math.floor(Math.random() * uppercase.length);
-        password2 = uppercase[randomIndex2];
-    }
-    for (let i = 0; i < 10; i++) {
-        const randomIndex3 = Math.floor(Math.random() * numbers.length);
-        password3 = numbers[randomIndex3];
-    }
-    for (let i = 0; i < 25; i++) {
-        const randomIndex4 = Math.floor(Math.random() * symsymbolsbols.length);
-        password4 = symbols[randomIndex4];
-    }
-    for (let i = 0; i < 5; i++) {
-        const randomIndex5 = Math.floor(Math.random() * similarChars.length);
-        password5 = similarChars[randomIndex5];
+    if( length < 6) {
+        return; // return sert à sortir de la fonction
     }
 
 
+    // Ici on prepare les pré-requis du générateur c'est à dire, un chiffre
+    // et un caractère spécial aléatoire
+    let psw = "";
+    psw += numbers.charAt(Math.floor(Math.random() * numbers.length)) // exemple psw = "7"
+    psw += specials.charAt(Math.floor(Math.random() * specials.length)) // exemple "7!"
 
+    let allCharacters = letters + numbers + specials
 
+    for (let i = 2; i < length; i++){
+        psw += allCharacters.charAt(Math.floor(Math.random() * allCharacters.length))
+    }
+
+    psw = shufflePsw(psw);
+
+    showPsw.textContent = psw
 }
 
+function shufflePsw(passwordToShuffle){
+    return passwordToShuffle.split('').sort(() => Math.random() - 0.5).join('')
+}
 
-
+// avant le melange j'ai psw = "7!Jk7w41"
+// 7 => ! on imagine qui choisi le point d'exclamation
+// 7 => J => J
+// J => k => k
+// J => 7 => J
+// J => w => w
+// w => 4 => 4
+// w => 1 => w
+//"!7k7J4w1"
