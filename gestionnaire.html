@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/gestionnaire.css">
+    <script defer src="js/gestionnaire.js"></script>
+    <title>Gestionnaire d'inventaire de bureau</title>
+</head>
+<body>
+    <main>
+        <div class="gestionnaire">
+            <h1> Gestionnaire d'inventaire de bureau</h1>
+            <input type="text" id="input-nom-objet" placeholder="Nom de l'objet">
+            <input type="number" id="input-quantite" placeholder="Quantité">
+            <select name="liste-categories" id="liste-select">
+                <option selected="selected" value="Autre">Autre</option>
+                <option value="Informatique">informatique</option>
+                <option value="Mobilier">mobilier</option>
+            </select>
+
+            <button id="add-objet">Ajouter</button>
+            <button id="clearinventaire">Vider l'inventaire</button>
+            <button id="trierinventaire">Trier par nom</button>
+            <select name="liste-trier" id="liste-trier">
+                <option value="">--Trier par nom--</option>
+                <option value="Autre">Autre</option>
+                <option value="Informatique">informatique</option>
+                <option value="Mobilier">mobilier</option>
+            </select>
+            <div class="counter" id="objetCounter">Total : 0 objets</div>
+        </div>
+
+    </main>
+
+    <div class="container" id="objetscontainer">
+<!--        <div class="image-block">-->
+<!--            <img src="https://scontent-cdg4-1.xx.fbcdn.net/v/t39.30808-6/307305110_407555981557506_9196104993345441964_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=lpCbQATspzoQ7kNvwFC6Ayp&_nc_oc=Adlq7-9DcfL6Kdi1LYmzQs4z97J4ncxYlumeVxrxyyj7y7JQNP0ER9__yHpRcDJkoPc&_nc_zt=23&_nc_ht=scontent-cdg4-1.xx&_nc_gid=KUKMpUvec1iJL-xWt0kklA&oh=00_Afc72N0ty32bsYx14jLllxoffT5yRkqL1wqv5ynbnMqJVQ&oe=68F6D280" alt="un roux bébé">-->
+<!--            <button>❌ Supprimer</button>-->
+<!--        </div>-->
+        
+    </div>
+</body>
+</html>

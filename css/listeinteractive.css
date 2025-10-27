@@ -1,0 +1,26 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background-color: #eee;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #c8e6c9;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: gray;
+}

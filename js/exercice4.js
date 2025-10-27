@@ -1,24 +1,20 @@
 
-const accueil=document.getElementById("accueil");
-const profil=document.getElementById("profil");
-const contact=document.getElementById("contact");
-const text=document.getElementById("text");
-let btnselect = true;
 
-text.textContent = "Lorem ipsum 1";
+const btnmenu=document.getElementById("btnmenu");
+const menu=document.getElementById("menu");
 
-accueil.addEventListener("focus", function (){
+btmenu.addEventListener("click", function (){
+menu.classList.toggle("show")
 
 
-text.textContent = "Lorem ipsum 1";
 
 
 })
 
-profil.addEventListener("focus", function (){
+menu.addEventListener("mouseout", function (){
 
+this.classList.toggle("show")
 
-text.textContent = "Lorem ipsum 2";
 
 
 })

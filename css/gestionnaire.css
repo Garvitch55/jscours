@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gestionnaire > h1{
+    margin-top: 30px;
+    margin-bottom:20px;
+}
+
+.objetscontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 2rem;
+}
+
+button {
+    background-color: cadetblue;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: white;
+    width: auto;
+}
+
+button:hover {
+    background-color: #395354;
+    cursor: pointer;
+}
+
+input{
+    text-indent: 10px;
+}
+
+select{
+    text-indent: 10px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #000000;
+}
+
+.background-autre{
+background-color: #f3e5f5;
+}
+
+.background-mobilier{
+background-color: #e0f7fa;
+}
+
+.background-informatique{
+background-color: #e0f7fa;
+}

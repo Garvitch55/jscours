@@ -61,14 +61,17 @@ display: inline-block;
 }
 
 .menu{
- display:flex;
+ display:none;
  flex-direction: column;
-    position: absolute;
-    top:40px;
-    left:50px;
+position: absolute;
+top:40px;
+left:50px;
 border:solid 1px #e7e7e7;
 border-radius:5px;    
 background-color: white;
+/* cette valeur ne pourra pas être en dessous de 160px */
+min-width: 160px; 
+z-index: 100;
 }
 .menu>a{
     display:flex;
@@ -81,4 +84,9 @@ background-color: white;
 
 .menu>a:hover{
     background-color: #f0f0f0;
+}
+
+
+.toggle{
+    display: flex;
 }

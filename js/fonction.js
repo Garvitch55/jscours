@@ -151,3 +151,50 @@ btn4.addEventListener("click", function (){
 
 })
 
+// LES FONCTIONS FLECHEES
+
+// function add(nbrA, nbrB) {
+// return nbrA + nbrB;
+// }
+
+let sum= (a, b) => a +b;
+console.log(sum(12, 15));  //27
+
+// quand il n'y a qu'un paramètre, les parenthèse sont facultatives
+let double = a => a * 2;
+console.log(double(140)); //280
+
+let calc = (a, b, c ) =>{
+    let d= a*b;
+    return d-c;
+}
+console.log(calc(14,2,12))//16
+
+let maj = str => str.toUpperCase()
+console.log(maj("coucou"));
+
+//PROBLEME AVEC this
+
+// Exemple normal
+
+// function arrow(){
+//     document.addEventListener("click", function(){
+//         console.log(this)
+//     })
+// }
+
+let arrow = () => {
+     document.addEventListener("click", () => {
+         console.log(this);
+ })
+ }
+
+arrow();
+
+const btnarrow = document.getElementById("btn-arrow");
+btnarrow.addEventListener("click", ()=>{
+console.log(this)
+})
+
+
+
