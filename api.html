@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/api.css">
+    <script defer src="js/api.js"></script>
+   <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+    <title>API, les promises, les ajax</title>
+</head>
+<body>
+    <main>
+        <h1>API, JSON, PROMISE, AJAX</h1>
+    <h2>1 - Les API</h2>
+    <p>API : Application Promgramming Interface</p>
+    <p>C'est une interface qui permet au moins à deux programmes ou services de communiquer entre eux</p>
+    <p>Exemple métaphorique : </p>
+    <ul>
+        <li>Tu es le <b>client</b> (front-end, c'est à dire le navigateur web).</li>
+        <li>Tu commandes un plat.</li>
+        <li>Le <b>cuisinier (le SERVEUR du back-end)</b> le prépare.</li>
+        <li>Le cuisinier prepare le plat à partir du garde manger (la base de données) dans la cuisine (serveur API)</li>
+        <li>L' <b>AJAX ou FETCH</b> joue le rôle de garçon de restaurant : il prend ta commande, la transmet à la cuisine puis t'apporte le plat</li>    
+    </ul>
+<div class="imgAPI">
+    <img src="img/how-a-web-api-works.png" alt="schéma de fonctionnement d'une api">
+    </div>
+<h2>Le JSON</h2>
+<P>Le JSON = JavaScript Object Notation</P>
+<p>C'est un <b>format de données</b> léger, lisible humainenement, utilisé pour <b>échanger des données</b> entre un serveur et une application web, ou entre deux applications n'utilisant pas le même langage.</p>
+
+<p>A quoi ça sert ?</p>
+<ul>
+    <li>Envoyer ou recevoir des données via une API</li>
+    <li>Stocker des données dans un fichier</li>
+    <li>Communiquer entre différentes technologie (Java, PHP, Python, Ruby etc...)</li>
+
+
+</ul>
+       <pre class="line-numbers">
+            <code class="language-json">
+{
+    "nom" : "Jean",
+    "age" : 30,
+    "email": "jean@exemple.com"
+    "estactif": true,
+    "compétences": ["HTML", "CSS", "Javascript"]
+
+
+    }
+
+
+
+
+
+
+            </code>
+        </pre>
+
+<h3>structure</h3>
+<ul>
+    <li>{} : un objet</li>
+    <li>Un système comme les objets de clé : valeur</li>
+    <li>Les clés sont toujours entre guillemets</li>
+    <li>Les valeurs autorisés sont :</li>
+        <ul>
+            <li>String : "Jean-Michel"</li>
+            <li>Nombre : 30</li>
+            <li>Booléen : true/false</li>
+            <li>tableau : []</li>
+            <li>objets : {}</li>
+            <li>null</li>
+        </ul>
+
+        
+</ul>
+<h3>JSON vs Objet JAVASCRIPT</h3>
+        <p>Attention ne pas confondre l'écriture d'un json avec un objet JS</p>
+       <pre class="line-numbers">
+            <code class="language-json">
+             {
+                "data" : [0, 2, 456],
+                "ower" : "Hippolyte de la Boucherie"
+                "admin" : false,
+                "employees" : null
+            
+            
+            }             
+            </code>
+        </pre>
+        
+       <pre class="line-numbers">
+            <code class="language-javascript">
+             const user = {
+                data : [0, 2, 456],
+                ower : "Hippolyte de la Boucherie"
+                admin : false,
+                employees : null      
+            };             
+            </code>
+        </pre>
+
+  <p>Convertion JSON- Objet JS</p>
+       <pre class="line-numbers">
+            <code class="language-javascript">
+            // Convertir un JSON en objet javascript
+            // On va simuler un JSON
+            const json = '{"nom": "Jean-Michel", "age": 30}';
+            //on convertit la string en JSON en objet Javascript
+            const obj = JSON.parse(json)
+            console.log(obj.nom)
+
+
+            //CONVERTIR UN OBJET JAVASCRIPT EN JSON
+            const user = {
+                nom : "Jean-Eude",
+                age : 12,
+            }
+            /// Convertit en string
+            const jsonObj = JSON.stringify(user)
+            console.log(jsonObj)
+            </code>
+        </pre>
+
+    <h2>Les promises</h2>
+    <p>une <b>Promise</b>(une promesse) est un objet JS qui représeente une <b>opération asynchrone</b> (c'est à dire qui ne se fait pas tout de suite)</p>
+
+        <p>Elles servent à éviter les "callback hells" (les fonction d'appel imbriquées entre elle de façon excessive)</p>
+    <p>L'enfers des rappels, aussi appelé "Pyramide de la mort", est une situation où plusieurs rappels imbriqués sont utilisés pour gérer des opération asynchrones en js. Cela se produit généralement lorsque plusieurs tâches asynchrones dépendent des résultats des autres</p>
+    <p>Donc nous avons besoin des promesses pour améliorer la lisibilité des opérations asynchrones</p>
+    <p>Les promesses on 3 états</p>
+    <ul>
+        <li>Resolve (reussite)</li>
+        <li>Rejected (échouer)</li>
+        <li>Pending (état d'attente)</li>
+    </ul>
+<h2>LES AJAX !!!!</h2>
+<p>AJAX = Asynchronous JavaScript and XML</p>
+
+<ul id="huge-list">
+
+</ul>
+<div id="aled"></div>
+
+</main>
+</body>
+</html>

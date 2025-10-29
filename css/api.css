@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial, sans serif;
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+
+.imgAPI{
+    width: 50%;
+     display: flex;
+}
+
+.imgAPI>img{
+   
+    max-width: 100%;
+        
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+
+}
+
+
+#huge-list li::first-letter {
+    text-transform: uppercase;
+
+}
+
+#aled {
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    align-items:center;
+
+}
+
+#aled img{
+    max-width: 100%;
+}
+
