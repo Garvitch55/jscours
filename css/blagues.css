@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../fonts/Quicksand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksandbold';
+  src: url('../fonts/Quicksand-Bold.ttf') format('truetype');
+}
+
+
+
+body{
+    background-color: #faf3e9;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   font-family: 'Quicksand';
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    gap:2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.div h4{
+    font-weight: bold;
+font-family: 'Quicksandbold';
+
+
+
+
+
+}
+.conteneur-langues{
+padding-left: 2rem;
+}
+
+.conteneur-type{
+padding-left: 2rem;
+
+}
+
+#conteneur-checkbox{
+padding-left: 2rem;
+}
+
+.exclure{
+padding-left: 2rem;
+}
+
+.conteneur-nbr{
+display: flex;
+justify-content: center;
+gap:2rem;
+}
+
+#conteneur-checkbox label {
+    padding-right: 3rem;
+}
+
+
+button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #dca473;
+    cursor: pointer;
+}
+
+#conteneur-blague{
+width: 100%;
+overflow: hidden;
+
+}
+
+
+
+
+.div{
+    background-color: #faf3e9;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.div {
+    position: absolute;
+    animation-name: blague-animation;
+    animation-iteration-count:initial;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+}
+
+
+.div{
+    position: relative;
+}
+
+@keyframes blague-animation {
+
+0% {    left: 100%;
+    transform: scale(1, 1);
+}
+
+100% {    left: 0%;
+    transform: scale(1, 1);
+}
+}

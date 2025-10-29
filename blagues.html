@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/blagues.css">
+    <script defer src="js/blagues.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+    <title>Blagues multilingues API</title>
+</head>
+
+<body>
+
+    <main>
+        <h1> 😂 Blagues multilingues</h1>
+        <div class="conteneur-langues">
+            <label for="langues">Langue : </label>
+            <select id="langues">
+                <option value="anglais">Anglais</option>
+                <option value="francais">Français</option>
+                <option value="allemand">Allemand</option>
+                <option value="espagnol">Espagnol</option>
+                <option value="tchèque">Tchèque</option>
+            </select>
+        </div>
+        <div class="conteneur-type">
+            <label for="types">Type de blague : </label>
+            <select id="types">
+                <option value="toutes">Toutes</option>
+                <option value="ligne">Une ligne</option>
+                <option value="question-reponse">Question / Réponse</option>
+            </select>
+        </div>
+
+        <label for="exclure" class="exclure" >Exclure : </label>
+        <div id="conteneur-checkbox">
+            <input type="checkbox" id="religion" name="religion" value="Religion">
+            <label for="religion">Religion</label>
+            <input type="checkbox" id="politique" name="politique" value="Politique">
+            <label for="politique">Politique</label>
+            <input type="checkbox" id="racisme" name="racisme" value="Racisme">
+            <label for="racisme">Racisme</label>
+            <input type="checkbox" id="sexisme" name="sexisme" value="Sexisme">
+            <label for="sexisme">Sexisme</label>
+            <input type="checkbox" id="vulgaire" name="vulgaire" value="NSFW">
+            <label for="vulgaire">Vulgaire</label>
+        </div>
+
+        <div class="conteneur-nbr">
+            <label for="nbr">Nombre : </label>
+            <select id="nbr-blagues">
+                <option value="1blague">1 blague</option>
+                <option value="2blagues">2 blagues</option>
+                <option value="3blagues">3 blagues</option>
+            </select>
+            <button>Obtenir des blagues</button>
+
+        </div>
+        <div id="conteneur-blague"></div>
+
+    </main>
+
+</body>
+
+</html>
